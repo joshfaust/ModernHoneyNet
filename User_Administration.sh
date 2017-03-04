@@ -12,7 +12,7 @@ if [ "$(whoami)" != "root" ]
 fi 
 
 echo -n 'Would you like to add or delete a user? '; read userdecision
-if [ $userdecision == "add" ] || [ $userdecision == "Add"]
+if [ $userdecision == "add" ] || [ $userdecision == "Add" ]
 	then
 	echo -n "What is the username you would like to add? "; read username
 	adduser $username
@@ -22,7 +22,11 @@ if [ $userdecision == "add" ] || [ $userdecision == "Add"]
 		then
 		usermod -aG sudo $username
 		echo "$username has been added to the Sudoers file"
+		exit 1
+	else
+		exit 1
 	fi
+
 elif [ $userdecision == "delete" ] || [ $userdecision == "Delete" ]
 	then
 	echo -n 'What is the username you would like to delete? '; read deluser
