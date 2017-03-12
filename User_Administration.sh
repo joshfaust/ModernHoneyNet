@@ -22,9 +22,9 @@ if [ $userdecision == "add" ] || [ $userdecision == "Add" ]
 		then
 		usermod -aG sudo $username
 		echo "$username has been added to the Sudoers file"
-		exit 1
+		exit 0
 	else
-		exit 1
+		exit 0
 	fi
 
 elif [ $userdecision == "delete" ] || [ $userdecision == "Delete" ]
@@ -33,6 +33,6 @@ elif [ $userdecision == "delete" ] || [ $userdecision == "Delete" ]
 	deluser --remove-home $deluser
 	echo "$deluser has been removed and their home directory deleted"
 fi
-exit 1
+exit 0
 
 
