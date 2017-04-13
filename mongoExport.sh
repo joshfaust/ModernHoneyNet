@@ -32,7 +32,12 @@ echo""
 echo "======================================"
 echo "         Dumping CSV data             "
 echo "======================================"
+cd $path
 
-mongoexport --db mnemosyne --collection session --fields=_id,protocol,source_ip,source_port,destination_port,destination_ip,honeypot,timestamp,identifier --csv
+mongoexport --db mnemosyne --collection session --fields=_id,protocol,source_ip,source_port,destination_port,destination_ip,honeypot,timestamp,identifier --csv > session.csv
+mongoexport --db mnemosyne --collection hpfeed --fields=_id,ident,timestamp,normalized,payload,local_host,connection_type,connection_protocol,local_port,remote_port,remote_hostname,connection_transport,remote_host,channel --csv > hpfeeds.csv
+mongoexport --db mnemosyne --collection counts --fields=_id,date,identifier,event_count --csv > counts.csv
+mongoexport --db mnemosyne --collection daily_stats --fields=_id,channel,date,hourly,23 --csv > daily_stats.csv
+mongoexport --db mnemosyne --collection system.indexes --fields=v,key,_id,name,ns --csv > system_indexes.csv
 
 echo "Successfully Dumped to $path"
