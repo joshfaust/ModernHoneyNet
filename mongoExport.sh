@@ -17,15 +17,15 @@ echo ""
 echo "======================================"
 echo "         Dumping JSON data            "
 echo "======================================"
-mongodump --db mnemosyne --collection hpfeed --out $path/hpfeeds.json
-mongodump --db mnemosyne --collection session  --out $path/session.json
-mongodump --db mnemosyne --collection system.indexes --out $path/SI.json
-mongodump --db mnemosyne --collection metadata --out $path/metadata.json
-mongodump --db mnemosyne --collection file --out $path/file.json
-mongodump --db mnemosyne --collection counts --out $path/counts.json
-mongodump --db mnemosyne --collection dork --out $path/dork.json
-mongodump --db mnemosyne --collection url --out $path/url.json
-mongodump --db mnemosyne --collection daily_stats --out $path/daily_Stats.json
+mongoexport --db mnemosyne --collection hpfeed > hpfeed.json
+mongoexport --db mnemosyne --collection session  > session.json
+mongoexport --db mnemosyne --collection system.indexes > system_indexes.json
+mongoexport --db mnemosyne --collection metadata > metadata.json
+mongoexport --db mnemosyne --collection file > file.json
+mongoexport --db mnemosyne --collection counts > counts.json
+mongoexport --db mnemosyne --collection dork > dork.json
+mongoexport --db mnemosyne --collection url > url.json
+mongoexport --db mnemosyne --collection daily_stats > daily_stats.json
 echo""
 echo " Done."
 echo""
