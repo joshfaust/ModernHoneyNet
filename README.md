@@ -8,6 +8,7 @@
 5. **mongoExport.sh** - Dumps all MHN MongoDB (mnemosyne) data into JSON and CSV files to a user defined path.
 6. **getTimestamps.sh** - Grabs all timestamps from MongoDB hpfeeds and session collections.
 7. **DELETE_ALL_MHN_MONGO_DATA.sh** - Asks user if they would like to wipe all data from MongoDB collections. _Very usefull when deploying multiple honeypots during pre-defined times for analysis!_
+8. **TopAttackers.sh** - Shows current top attacks in console.
 
 ### Directories: 
 
