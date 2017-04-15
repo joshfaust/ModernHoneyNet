@@ -1,5 +1,5 @@
 # ModernHoneyNet
-##Automating MHN Scripts:
+## Automating MHN Scripts:
 
 1. MHN_Install.sh - Checks if you are root, automatically grabs MHN repository and install in the proper directories.
 2. MHN_Status.sh - Checks the status of SupervisorCTL on the server side.
