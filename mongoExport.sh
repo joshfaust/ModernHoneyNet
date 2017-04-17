@@ -11,8 +11,17 @@ if [ "$(whoami)" != "root" ]
 	exit 1
 fi
 
+
+#Create a directory to store the dump in by asking the user for the path 
+# and for the dump duration.
+todayDate=`echo $(date) | awk '{print $2,$3,$6}' | sed 's/ /_/g'`
 read -e -p "What is the path where you would like to dump the table to? " path
 cd $path
+read -e -p "Enter Data Duration (24hr,48hr,72hr): " hour
+fileName=$(echo ${hour}_${todayDate}"_Dump")
+mkdir $fileName
+cd $fileName
+
 echo ""
 echo "======================================"
 echo "         Dumping JSON data            "
