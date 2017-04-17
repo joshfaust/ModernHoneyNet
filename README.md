@@ -12,7 +12,7 @@
 
 ### Directories: 
 
-1. **BruteForceDeterrents** - For research purposes: contains IPtable rule scripts dedicated to deter Brute Force Attempts. These scripts were build to build a comparitive analysis from a baseline attack dataset. 
+1. **BruteForceDeterrents** - For research purposes: contains IPtable rule scripts dedicated to deter Brute Force Attempts. These scripts were built to detail a comparitive analysis from a baseline attack dataset using cowrie.
 
 
 
