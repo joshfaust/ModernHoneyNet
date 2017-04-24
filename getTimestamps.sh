@@ -4,7 +4,7 @@ echo "---------------------------------"
 echo "   Dumping Sessions Timestamps   "
 echo "---------------------------------"
 echo""
-mongoexport -db mnemosyne --collection session --fields=timestamp --csv > SessionTimestamps.csv
+mongoexport -db mnemosyne --collection session --fields=honeypot,timestamp --csv > SessionTimestamps.csv
 
 echo "---------------------------------"
 echo "   Dumping Sessions Timestamps   "

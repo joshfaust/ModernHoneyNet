@@ -49,3 +49,4 @@ mongoexport --db mnemosyne --collection system.indexes --fields=v,key,_id,name,n
 echo""
 echo""
 echo "Successfully Dumped to $path"
+echo ""
