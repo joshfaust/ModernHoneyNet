@@ -9,7 +9,7 @@
 6. **getTimestamps.sh** - Grabs all timestamps from MongoDB hpfeeds and session collections.
 7. **DELETE_ALL_MHN_MONGO_DATA.sh** - Asks user if they would like to wipe all data from MongoDB collections. _Very usefull when deploying multiple honeypots during pre-defined times for analysis!_
 8. **TopAttackers.sh** - Shows current top attackers in console.
-9. **ip.py ** - Takes a .csv file named ip.csv which contains ip addresses. It will output a file countries.csv which contains the IP and the associated country. If not found it will put "null" for the country.
+9. **ip.py** - Takes a .csv file named ip.csv which contains ip addresses. It will output a file countries.csv which contains the IP and the associated country. If not found it will put "null" for the country.
 
 ### Directories: 
 
